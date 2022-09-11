@@ -45,7 +45,3 @@ export const seedDatabase = async (client) => {
     throw Error("The collection `bob_ross_episodes` does not exist!");
   }
 };
-
-//  = {
-//   seedDatabase,
-// };

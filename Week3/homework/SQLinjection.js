@@ -26,7 +26,7 @@ const getPopulation = (Country, name, code, cb) => {
 
 getPopulation("country", "pakni", "PK ' OR '1'='1", showData);
 
-const getPopulation2 = (Country, name, code, cb) => {
+const getPopulationAvoidInjection = (Country, name, code, cb) => {
   connection.query(
     `SELECT Population FROM ${Country} WHERE Name = ? and code = ?`,
     [name, code],
