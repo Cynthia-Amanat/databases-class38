@@ -9,22 +9,10 @@ yes but i was not sure which kind of datatype is used here or i can divide membe
 
 3: To follow the 3NF compliant solution tables e.g
 
-1.  | member_id| member_name| member_address|
-    | 1 | Amit | 325 Max park |
-    | 2 | Hema | 516 6th Ave |
-    | 3 | Ben | 9 Peter St |
+1.  | member_id(PK)| member_name| member_address|
 
-2.  | venue_code| venue_description |
-    | 111 | Grand Ball Room |
-    | 112 | Mama's Kitchen |
-    | 113 | Zoku Roof Top |
+2.  | venue_id(PK)| venue_description |member_id(FK)
 
-3.  | food_code| food_description |
-    | C2 | chocolate lava cake |
-    | C1 | chicken Curry with herbs|
-    | M1 | mutton curry with rice |
+3.  | food_id(PK)| food_description |dinner_id(FK)
 
-4.  | dinner_id| dinner_date| member_id|venue_code | food_code|
-    | 101 | 2022-10-15 | 1 | 111 | C2 |
-    | 102 | 2022-09-09 | 2 | 112 | C1 |
-    | 103 | 2022-11-20 | 3 | 113 | M1 |
+4.  | dinner_id(PK)| dinner_date| venue_id(FK)|
